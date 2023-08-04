@@ -1,3 +1,3 @@
 # Apollographql
 
-*Some practice in Apollo & GrapgQl*
+*Some practice in Apollo & GraphQl*
