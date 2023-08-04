@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ApolloGraphQl</string>
+    <string name="name">Name:</string>
+    <string name="serif_monospace">serif-monospace</string>
+    <string name="emoji">Emoji</string>
+    <string name="currency">Currency:</string>
+    <string name="capital">Capital:</string>
+    <string name="languages">Languages:</string>
+    <string name="continent">Continent:</string>
+</resources>

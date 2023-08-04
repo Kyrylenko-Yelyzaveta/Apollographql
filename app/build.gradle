@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id("com.apollographql.apollo3") version "3.8.2"
+    id 'kotlin-kapt'
+    id("com.google.dagger.hilt.android")
+
+
+}
+
+apollo {
+    service("service") {
+        packageName.set("com.aaaaaa.apollographql")
+    }
+}
+
+android {
+    namespace 'com.aaaaaa.apollographql'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.aaaaaa.apollographql"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    //GraphQL
+    implementation("com.apollographql.apollo3:apollo-runtime:3.8.2")
+    implementation "com.apollographql.apollo:apollo-http-cache:2.5.9"
+    kapt "com.apollographql.apollo:apollo-gradle-plugin:2.5.9"
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
+
+    //Coil
+    implementation("io.coil-kt:coil:2.4.0")
+
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+
+
+    def lifecycle_version = "2.6.1"
+    //viewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+
+    implementation "androidx.fragment:fragment-ktx:1.6.0"
+
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

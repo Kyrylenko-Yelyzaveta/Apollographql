@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/back_item_shape"
+    android:gravity="fill_horizontal"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/imEmojiSrc"
+        style="@style/txt_default_style"
+        android:text="@string/emoji"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/layoutNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtName"
+                style="@style/txt_default_style"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/txtNameMeaning"
+                style="@style/txt_default_style"
+                android:text="@string/name" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtCapital"
+                style="@style/txt_default_style"
+                android:text="@string/capital" />
+
+            <TextView
+                android:id="@+id/txtCapitalMeaning"
+                style="@style/txt_default_style"
+                android:text="@string/capital" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtCurrency"
+                style="@style/txt_default_style"
+                android:text="@string/currency" />
+
+
+            <TextView
+                android:id="@+id/txtCurrencyMeaning"
+                style="@style/txt_default_style"
+                android:text="@string/currency" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/extraLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/languages"
+                style="@style/txt_default_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/languages" />
+
+            <TextView
+                android:id="@+id/continent"
+                style="@style/txt_default_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/continent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
